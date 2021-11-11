@@ -1,0 +1,9 @@
+BasedOnStyle: Google
+ColumnLimit: 100
+IndentWidth: 4
+NamespaceIndentation: All
+AlignConsecutiveAssignments: Consecutive
+AlignConsecutiveBitFields: Consecutive
+AlignConsecutiveDeclarations: Consecutive
+AlignConsecutiveMacros: Consecutive
+TabWidth: 4

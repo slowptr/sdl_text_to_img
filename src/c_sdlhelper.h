@@ -5,7 +5,7 @@
 #include <SDL_ttf.h>
 
 class c_sdlhelper {
-public:
+   public:
     c_sdlhelper() { _init(); };
 
     c_sdlhelper(const std::string &path, int size) {
@@ -13,11 +13,11 @@ public:
         load_font(path, size);
     }
 
-    ~c_sdlhelper() {
-        TTF_CloseFont(_cur_font);
-    }
+    ~c_sdlhelper() { TTF_CloseFont(_cur_font); }
 
-    void load_font(const std::string &path, int size) { _cur_font = TTF_OpenFont(path.c_str(), size); }
+    void load_font(const std::string &path, int size) {
+        _cur_font = TTF_OpenFont(path.c_str(), size);
+    }
 
     void write_text_to_bmp(const std::string &text, const std::string &path, SDL_Color color) {
         SDL_Surface *surface = TTF_RenderText_Solid(_cur_font, text.c_str(), color);
@@ -30,7 +30,7 @@ public:
         write_text_to_bmp(text, path, black);
     }
 
-private:
+   private:
     TTF_Font *_cur_font{};
 
     static void _init() {
@@ -39,4 +39,4 @@ private:
     }
 };
 
-#endif //SDL_TEXT_TO_IMG_C_SDLHELPER_H
+#endif  // SDL_TEXT_TO_IMG_C_SDLHELPER_H
